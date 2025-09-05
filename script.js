@@ -48,12 +48,12 @@ function showError(error) {
 
 
 const points = [
-  {title: "Īmān", audio: "audio/iman.mp3"},
-  {title: "Namaz", audio: "audio/namaz.mp3"},
-  {title: "Ilm & Zikr", audio: "audio/ilm_zikr.mp3"},
-  {title: "Ikram-e-Muslim", audio: "audio/ikram.mp3"},
-  {title: "Ikhlas-e-Niyat", audio: "audio/ikhlas.mp3"},
-  {title: "Dawat-e-Tabligh", audio: "audio/dawat.mp3"}
+  {title: "Īmān", audio: "iman.mp3"},
+  {title: "Namaz", audio: "namaz.mp3"},
+  {title: "Ilm & Zikr", audio: "ilm_zikr.mp3"},
+  {title: "Ikram-e-Muslim", audio: "ikram.mp3"},
+  {title: "Ikhlas-e-Niyat", audio: "ikhlas.mp3"},
+  {title: "Dawat-e-Tabligh", audio: "dawat.mp3"}
 ];
 
 const quizzes = {
@@ -265,4 +265,5 @@ points.forEach(point => {
         quizDiv.appendChild(submitBtn);
         card.appendChild(quizDiv);
     });
+
 });
