@@ -141,9 +141,9 @@ header p { font-size: 1.2em; margin-top: 10px; }
   background-color: #fdfdfd;
   margin-bottom: 20px;
   flex-wrap: wrap;
-  min-height: 100px; 
-  min-width: 900px;   
-  margin-left: 500px;   /* Gives panel more height */
+  min-height: 50px; 
+  min-width: 100px;   
+  margin-left: 100px;   /* Gives panel more height */
 }
 
 #qibla-compass, #timings-panel {
@@ -151,3 +151,4 @@ header p { font-size: 1.2em; margin-top: 10px; }
   max-width: 45%;           /* Increase width to almost half of panel */
   text-align: center;
 }
+
