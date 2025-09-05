@@ -133,22 +133,30 @@ header p { font-size: 1.2em; margin-top: 10px; }
 #prayer-panel {
   display: flex;
   justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  padding: 40px 20px;      /* More padding for space */
+  align-items: flex-start; /* Align top */
+  padding: 20px;
   gap: 50px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #fdfdfd;
   margin-bottom: 20px;
-  flex-wrap: wrap;
-  min-height: 50px; 
-  min-width: 100px;   
-  margin-left: 100px;   /* Gives panel more height */
+  flex-wrap: wrap;         /* Allows stacking on small screens */
 }
 
+/* Each half panel */
 #qibla-compass, #timings-panel {
-  flex: 1;                 /* Each takes half width */
-  max-width: 45%;           /* Increase width to almost half of panel */
+  flex: 1;                 /* Each takes half width on large screens */
+  max-width: 45%;           /* Limit width to 45% */
   text-align: center;
 }
+
+/* MOBILE: stack vertically instead of side by side */
+@media screen and (max-width: 768px) {
+  #qibla-compass, #timings-panel {
+    max-width: 90%;       /* Almost full width */
+    margin: 0 auto;       /* Center horizontally */
+  }
+}
+
+
 
