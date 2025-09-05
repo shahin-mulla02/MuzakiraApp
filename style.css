@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f0fff0, #e6ffe6);
+    color: #1a1a1a;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: #065f46;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 { font-size: 2.5em; margin: 0; }
+header p { font-size: 1.2em; margin-top: 10px; }
+
+#weekly-prayer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #065f46;
+    background: #d1fae5;
+    border-left: 5px solid #10b981;
+    margin: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+#points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #065f46;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.card audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #10b981;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card button:hover { background: #059669; }
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 12px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    font-size: 22px;
+    color: #065f46;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+.card audio {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.card button {
+    background-color: #fbbf24;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+.quiz-container{
+    margin-top: 10px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+.quiz-result{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#prayer-panel {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  padding: 40px 20px;      /* More padding for space */
+  gap: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  min-height: 100px; 
+  min-width: 900px;   
+  margin-left: 500px;   /* Gives panel more height */
+}
+
+#qibla-compass, #timings-panel {
+  flex: 1;                 /* Each takes half width */
+  max-width: 45%;           /* Increase width to almost half of panel */
+  text-align: center;
+}
