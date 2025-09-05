@@ -165,9 +165,10 @@ header p { font-size: 1.2em; margin-top: 10px; }
   }
 
   #qibla-compass p, #timings-panel p {
-    font-size: 14px;      /* smaller text for mobile */
+    font-size: 5px;      /* smaller text for mobile */
   }
 }
+
 
 
 
