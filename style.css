@@ -129,34 +129,40 @@ header p { font-size: 1.2em; margin-top: 10px; }
     margin-top: 10px;
     font-weight: bold;
 }
-
 #prayer-panel {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: flex-start; /* Align top */
+  justify-content: space-between; /* Space between on desktop */
+  align-items: flex-start;
   padding: 20px;
-  gap: 50px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #fdfdfd;
-  margin-bottom: 20px;
-  flex-wrap: wrap;         /* Allows stacking on small screens */
+  margin: 20px auto; /* Center horizontally */
+  flex-wrap: wrap;   /* Allows stacking on mobile */
+  max-width: 900px;  /* Limit width on large screens */
 }
 
-/* Each half panel */
 #qibla-compass, #timings-panel {
-  flex: 1;                 /* Each takes half width on large screens */
-  max-width: 45%;           /* Limit width to 45% */
+  flex: 1;
+  max-width: 45%;    /* Side by side on desktop */
   text-align: center;
+  margin-bottom: 20px;
 }
 
-/* MOBILE: stack vertically instead of side by side */
+/* MOBILE: stack immediately below the weekly message */
 @media screen and (max-width: 768px) {
+  #prayer-panel {
+    flex-direction: column; /* Stack vertically */
+    padding: 15px;
+  }
+
   #qibla-compass, #timings-panel {
-    max-width: 90%;       /* Almost full width */
-    margin: 0 auto;       /* Center horizontally */
+    max-width: 95%;        /* Almost full width */
+    margin: 0 auto 15px;   /* Center horizontally and add spacing */
   }
 }
+
+
 
 
 
