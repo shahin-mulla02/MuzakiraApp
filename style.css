@@ -131,43 +131,56 @@ header p { font-size: 1.2em; margin-top: 10px; }
 }
 #prayer-panel {
   display: flex;
-  justify-content: space-between; /* Space between on desktop */
+  justify-content: space-between;
   align-items: flex-start;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #fdfdfd;
-  margin: 20px auto; /* Center horizontally */
-  flex-wrap: wrap;   /* Allows stacking on mobile */
-  max-width: 600px;
-  max-height:200px/* Limit width on large screens */
+  margin: 20px auto;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  max-width: 600px; /* width on desktop */
+  box-sizing: border-box; /* include padding in width */
 }
 
 #qibla-compass, #timings-panel {
   flex: 1;
-  max-width: 45%;    /* Side by side on desktop */
+  max-width: 45%; 
   text-align: center;
   margin-bottom: 20px;
+  box-sizing: border-box;
+  word-wrap: break-word; /* wrap text if too long */
 }
 
+#timings li {
+  font-size: 16px; /* reduce on mobile if needed */
+  line-height: 1.4em;
+}
+
+/* Mobile adjustments */
 @media screen and (max-width: 768px) {
+  #prayer-panel {
+    flex-direction: column; /* stack vertically */
+    max-width: 95%; /* almost full width on mobile */
+    padding: 10px;
+  }
+
   #qibla-compass, #timings-panel {
-    max-width: 90%;       /* slightly smaller */
-    margin: 0 auto 10px;  /* center below weekly message */
-    padding: 10px;        /* smaller padding */
-    box-sizing: border-box; /* ensures padding included in width */
-    word-wrap: break-word; /* wrap long content */
+    max-width: 100%; /* full width */
+    margin: 0 auto 15px;
+    padding: 10px;
   }
 
   #timings li {
-    font-size: 1px;      /* smaller text for mobile */
-    line-height: 1.3em;   /* reduce spacing */
+    font-size: 14px; /* smaller text */
   }
 
   #qibla-compass p, #timings-panel p {
-    font-size: 1px;      /* smaller text for mobile */
+    font-size: 14px; /* smaller text */
   }
 }
+
+
 
 
 
