@@ -139,7 +139,8 @@ header p { font-size: 1.2em; margin-top: 10px; }
   background-color: #fdfdfd;
   margin: 20px auto; /* Center horizontally */
   flex-wrap: wrap;   /* Allows stacking on mobile */
-  max-width: 900px;  /* Limit width on large screens */
+  max-width: 600px;
+  max-height:400px/* Limit width on large screens */
 }
 
 #qibla-compass, #timings-panel {
@@ -161,6 +162,7 @@ header p { font-size: 1.2em; margin-top: 10px; }
     margin: 0 auto 15px;   /* Center horizontally and add spacing */
   }
 }
+
 
 
 
