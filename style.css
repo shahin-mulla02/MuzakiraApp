@@ -138,8 +138,8 @@ header p { font-size: 1.2em; margin-top: 10px; }
   border-radius: 10px;
   background-color: #fdfdfd;
   margin: 20px auto;
-  flex-wrap: wrap; /* allows stacking on small screens */
-  max-width: 600px; /* width on desktop */
+  flex-wrap: wrap; /* stack on small screens */
+  max-width: 600px; 
   box-sizing: border-box; /* include padding in width */
 }
 
@@ -148,37 +148,48 @@ header p { font-size: 1.2em; margin-top: 10px; }
   max-width: 45%; 
   text-align: center;
   margin-bottom: 20px;
+  padding: 10px;
   box-sizing: border-box;
-  word-wrap: break-word; /* wrap text if too long */
+  word-wrap: break-word; /* wrap long text */
+}
+
+#timings {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #timings li {
-  font-size: 16px; /* reduce on mobile if needed */
+  font-size: 16px; 
   line-height: 1.4em;
+  word-wrap: break-word;  /* wrap long words */
+  overflow-wrap: anywhere; /* extra safety */
 }
 
-/* Mobile adjustments */
+/* Mobile layout */
 @media screen and (max-width: 768px) {
   #prayer-panel {
     flex-direction: column; /* stack vertically */
-    max-width: 95%; /* almost full width on mobile */
+    max-width: 95%; 
     padding: 10px;
   }
 
   #qibla-compass, #timings-panel {
     max-width: 100%; /* full width */
     margin: 0 auto 15px;
-    padding: 10px;
+    padding: 5px;
   }
 
   #timings li {
-    font-size: 14px; /* smaller text */
+    font-size: 14px; /* smaller on mobile */
   }
 
   #qibla-compass p, #timings-panel p {
-    font-size: 14px; /* smaller text */
+    font-size: 14px;
   }
 }
+
+
 
 
 
