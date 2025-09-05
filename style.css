@@ -150,21 +150,26 @@ header p { font-size: 1.2em; margin-top: 10px; }
   margin-bottom: 20px;
 }
 
-/* MOBILE: stack immediately below the weekly message */
 @media screen and (max-width: 768px) {
   #qibla-compass, #timings-panel {
-    max-width: 80%;        /* smaller width */
-    margin: 0 auto 10px;   /* center below weekly message */
-    padding: 10px;         /* smaller padding inside boxes */
+    max-width: 90%;       /* slightly smaller */
+    margin: 0 auto 10px;  /* center below weekly message */
+    padding: 10px;        /* smaller padding */
+    box-sizing: border-box; /* ensures padding included in width */
+    word-wrap: break-word; /* wrap long content */
+  }
+
+  #timings li {
+    font-size: 14px;      /* smaller text for mobile */
+    line-height: 1.3em;   /* reduce spacing */
+  }
+
+  #qibla-compass p, #timings-panel p {
+    font-size: 14px;      /* smaller text for mobile */
   }
 }
 
 
-  #qibla-compass, #timings-panel {
-    max-width: 95%;        /* Almost full width */
-    margin: 0 auto 15px;   /* Center horizontally and add spacing */
-  }
-}
 
 
 
